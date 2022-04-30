@@ -1,7 +1,9 @@
+import Meal from "./Meal";
+
 export default class Meals {
-    private _main: cheerio.Cheerio[]
-    private _sub: cheerio.Cheerio[]
-    constructor(main: cheerio.Cheerio[], sub: cheerio.Cheerio[]) {
+    private _main: Meal[]
+    private _sub: Meal[]
+    constructor(main: Meal[], sub: Meal[]) {
         this._main = main;
         this._sub = sub;
     }
