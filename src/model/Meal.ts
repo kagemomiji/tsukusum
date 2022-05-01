@@ -31,7 +31,7 @@ export default class Meal{
         const $ = cheerio.load(body);
         $('#r_contents').children('p').each((_i:number, element: cheerio.Element) => {
             let foodInfo = $(element);
-            if(foodInfo.find('a').is('a')){
+            if(foodInfo.contents().first().is('a')){
                 let amount = foodInfo.children('span').first().text();
                 let name = foodInfo.children('a').first().text();
                 feed.push(new Food(name, amount));
