@@ -1,25 +1,24 @@
-import request from 'request';
+import axios from 'axios';
+import Meal from './model/Meal';
 import Meals from './model/Meals';
 
 const url = process.argv[2];
 console.log(url);
 
-request(url, (e: any, _response, body: string) => {
-    if (e) {
-        console.error(e)
-    }
-    try {
-        const meals: Meals = new Meals(body);
-       
-        meals.main.forEach((v , _i) => {
-            console.log(v);
-        });
-        console.log("副菜");
-        meals.sub.forEach((v , i) => {
-            console.log(v);
-        });
-        console.log(meals.html());
-     } catch (e) {
-         console.error(e)
-     }
-})
+const main = async () => {
+    const res = await axios.get(url);
+    const meals: Meals = new Meals(res.data);
+
+    await meals.getFoods();
+    
+    meals.main.forEach((v , _i) => {
+        console.log(v);
+    });
+    console.log("副菜");
+    meals.sub.forEach((v , i) => {
+        console.log(v);
+    });
+    console.log(meals.html());
+}
+
+main();

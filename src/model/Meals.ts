@@ -38,6 +38,10 @@ export default class Meals {
         return all;
     }
 
+    public getFoods = async (): Promise<void> =>  {
+        await Promise.allSettled(this.all().map((meal: Meal, _i) => meal.setFoods()));
+    }
+
     public html() : string | null {
         return this._content.parents('#page_recipe').html();
     }
