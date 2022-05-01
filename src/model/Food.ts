@@ -2,7 +2,8 @@ export default class Food {
     private _name: string
     private _amount: string
     constructor(name: string, amount: string) {
-        this._name = name;
+        
+        this._name = name.replace(/(◎|○|◯)/,"");
         this._amount = amount;
     }
 
