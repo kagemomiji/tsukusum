@@ -29,21 +29,21 @@ export default class Meal{
 
     private extractFromBody(body: string){
         // set foods
-        let feed : Food[] = [];
+        let foods : Food[] = [];
         const $ = cheerio.load(body);
         $('#r_contents').children('p').each((_i:number, element: cheerio.Element) => {
             let foodInfo = $(element);
             if(foodInfo.contents().first().is('a')){
                 let amount = foodInfo.children('span').first().text();
                 let name = foodInfo.children('a').first().text();
-                feed.push(new Food(name, amount));
+                foods.push(new Food(name, amount));
             } else {
                 let amount = foodInfo.children('span').first().text();
                 let name = foodInfo.contents().first().text();
-                feed.push(new Food(name, amount));
+                foods.push(new Food(name, amount));
             }
         });
-        this._foods = feed;
+        this._foods = foods;
 
         // set steps
         let steps: string[] = [];
@@ -69,7 +69,7 @@ export default class Meal{
             // old content does not have .maru content
             for (const alias of aliasList){
                 if (step.includes(alias)){
-                    let replaceContent = this.getFeedByAlias(alias).map((v: Food) => v.toString()).join("と");
+                    let replaceContent = this.getFoodsByAlias(alias).map((v: Food) => v.toString()).join("と");
                     step = step.replace(alias, replaceContent);
                 }
             }
@@ -78,7 +78,7 @@ export default class Meal{
         this._steps = steps;
     }
 
-    private getFeedByAlias = (alias: string): Food[] => {
+    private getFoodsByAlias = (alias: string): Food[] => {
         return this._foods.filter( (v: Food) => v.alias === alias);
     }
 
