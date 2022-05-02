@@ -6,19 +6,23 @@ const url = process.argv[2];
 console.log(url);
 
 const main = async () => {
-    const res = await axios.get(url, { timeout : 5000 });
-    const meals: Meals = new Meals(res.data);
+    try {
+        const res = await axios.get(url, { timeout : 5000 });
+        const meals: Meals = new Meals(res.data);
 
-    await meals.getFoods();
+        await meals.getFoods();
     
-    meals.main.forEach((v , _i) => {
-        console.log(v);
-    });
-    console.log("副菜");
-    meals.sub.forEach((v , i) => {
-        console.log(v);
-    });
-    console.log(meals.html());
+        meals.main.forEach((v , _i) => {
+            console.log(v);
+        });
+        console.log("副菜");
+        meals.sub.forEach((v , i) => {
+            console.log(v);
+        });
+        console.log(meals.html());
+    } catch(e){
+        console.error(e);
+    }
 }
 
 main();
