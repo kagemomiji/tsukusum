@@ -1,12 +1,15 @@
 import cheerio from 'cheerio';
 import Food from "./Food";
 import axios from "axios";
+import { AllStoreType, StoreType } from '../common/StoreType';
 
 export default class Meal{
     private _name: string
     private _url?: string
     private _foods: Food[] = [];
     private _steps: string[] = [];
+    private _storeLimit?: string = undefined;
+    private _storeType?: StoreType
     constructor(name: string, url?: string){
         this._name = name;
         this._url = url;
@@ -20,6 +23,14 @@ export default class Meal{
         return this._url;
     }
 
+    get storeLimit(){
+        return this._storeLimit;
+    }
+
+    get storeType(){
+        return this._storeType;
+    }
+
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
             const res = await  axios.get(this._url, { timeout : 5000 });
@@ -28,9 +39,28 @@ export default class Meal{
     }
 
     private extractFromBody(body: string){
+
+        const $ = cheerio.load(body);
+        // extract limit content string
+        let limitContent: string = $('#clock_reizouko').children('span').filter((_i: number ,element: cheerio.Element) => $(element).text().includes("日持ち")).text();
+        //remove `日持ち：`
+        limitContent = limitContent.substring(limitContent.indexOf("："));
+        //extract store type
+        for (const storeType of AllStoreType){
+            if (limitContent.includes(storeType)){
+                this._storeType = storeType;
+                break;
+            }
+        }
+
+        //extract store limit
+        let ret = limitContent.match(/\d+(日|週間)/);
+        if ( ret !== null) {
+            this._storeLimit = ret[0];
+        }
+
         // set foods
         let foods : Food[] = [];
-        const $ = cheerio.load(body);
         $('#r_contents').children('p').each((_i:number, element: cheerio.Element) => {
             let foodInfo = $(element);
             if(foodInfo.contents().first().is('a')){
