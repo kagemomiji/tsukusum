@@ -6,6 +6,7 @@ export default class Meal{
     private _name: string
     private _url?: string
     private _foods: Food[] = [];
+    private _steps: string[] = [];
     constructor(name: string, url?: string){
         this._name = name;
         this._url = url;
@@ -22,11 +23,12 @@ export default class Meal{
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
             const res = await axios.get(this._url);
-            this._extractFoods(res.data);
+            this._extractFromBody(res.data);
         }
     }
 
-    private _extractFoods(body: string){
+    private _extractFromBody(body: string){
+        // set foods
         let feed : Food[] = [];
         const $ = cheerio.load(body);
         $('#r_contents').children('p').each((_i:number, element: cheerio.Element) => {
@@ -42,5 +44,12 @@ export default class Meal{
             }
         });
         this._foods = feed;
+
+        // set steps
+        let steps: string[] = [];
+        $('#ins_contents').children('div').each((_i:number, element: cheerio.Element) => {
+           steps.push($(element).children('.ins_des').contents().first().text().replace(/（$/,""));
+        });
+        this._steps = steps;
     }
 }
