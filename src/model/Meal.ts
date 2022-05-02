@@ -23,11 +23,11 @@ export default class Meal{
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
             const res = await axios.get(this._url);
-            this._extractFromBody(res.data);
+            this.extractFromBody(res.data);
         }
     }
 
-    private _extractFromBody(body: string){
+    private extractFromBody(body: string){
         // set foods
         let feed : Food[] = [];
         const $ = cheerio.load(body);
@@ -47,9 +47,44 @@ export default class Meal{
 
         // set steps
         let steps: string[] = [];
+        let aliasList: string[] = this.getAliasList();
         $('#ins_contents').children('div').each((_i:number, element: cheerio.Element) => {
-           steps.push($(element).children('.ins_des').contents().first().text().replace(/（$/,""));
+            let content = $(element).children('.ins_des');
+            content.find('a').remove();
+            content.children('.maru').each((_i: Number, element: cheerio.Element) => {
+                let maruContent = $(element).children('span').attr('data-text');
+                if (maruContent !== undefined){
+                    $(element).replaceWith(maruContent.split(/\r?\n/).map(v => {
+                        let splitedContent = v.split(/\s/);
+                        if(splitedContent.length > 1){
+                            return `${splitedContent[0]}(${splitedContent[1]})`;
+                        } else {
+                            return v;
+                        }
+                    }).join("と"));
+                }
+            });
+            let step: string = content.text().replace(/(（|）)/g,"");
+
+            // old content does not have .maru content
+            for (const alias of aliasList){
+                if (step.includes(alias)){
+                    let replaceContent = this.getFeedByAlias(alias).map((v: Food) => v.toString()).join("と");
+                    step = step.replace(alias, replaceContent);
+                }
+            }
+            steps.push(step);
         });
         this._steps = steps;
+    }
+
+    private getFeedByAlias = (alias: string): Food[] => {
+        return this._foods.filter( (v: Food) => v.alias === alias);
+    }
+
+    private getAliasList = (): string[] => {
+        let result = this._foods.map((v: Food) => (v.alias)).filter((v: string) => (v.length > 0));
+        return [... new Set(result)];
+
     }
 }
