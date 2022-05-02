@@ -6,7 +6,7 @@ const url = process.argv[2];
 console.log(url);
 
 const main = async () => {
-    const res = await axios.get(url);
+    const res = await axios.get(url, { timeout : 5000 });
     const meals: Meals = new Meals(res.data);
 
     await meals.getFoods();

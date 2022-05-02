@@ -22,7 +22,7 @@ export default class Meal{
 
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
-            const res = await axios.get(this._url);
+            const res = await  axios.get(this._url, { timeout : 5000 });
             this.extractFromBody(res.data);
         }
     }
