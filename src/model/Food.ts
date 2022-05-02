@@ -4,7 +4,9 @@ export default class Food {
     constructor(name: string, amount: string) {
         
         this._name = name.replace(/(◎|○|◯)/,"");
-        this._amount = amount;
+        this._amount = amount.replace(/[Ａ-Ｚａ-ｚ０-９／]/g, (s) => {
+            return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        });
     }
 
     get name(){
