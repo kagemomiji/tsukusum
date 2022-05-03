@@ -1,14 +1,17 @@
 import cheerio from 'cheerio';
 import Meal from "./Meal";
+import Tool from './Tool';
 
 const RECIPE_SPEC_TAG = 'h3';
 
 export default class Meals {
     private _main: Meal[] = []
     private _sub: Meal[] = []
+    private _tools: Tool[] = []
     private _content: cheerio.Cheerio
     constructor(body: string) {
         const $ = cheerio.load(body);
+        // extrat meal
         let isSubMeal: boolean = false;
         this._content = $('section').has('#step1').children('#page_recipe').children().children();
         this._content.children().each( (_i: number, element: cheerio.Element) => {
@@ -21,6 +24,12 @@ export default class Meals {
                 else this._main.push(meal);
             }
         });
+        // extract tools
+        $('.tejun').children('thead').children().children().each((i: number, element: cheerio.Element) => {
+            if (!$(element).text().includes("手順")){
+                this._tools = this._tools.concat($(element).text().split('/').map(name => new Tool(i, name)));
+            }
+        });
     }
 
     public get main() {
@@ -30,16 +39,19 @@ export default class Meals {
     public get sub() {
         return this._sub;
     }
+    public get tools(){
+        return this._tools;
+    }
 
     public all(): Meal[]{
         let all: Meal[] = [];
-        this._main.forEach((meal: Meal, _i) => all.push(meal));
-        this._sub.forEach((meal: Meal, _i) => all.push(meal));
+        this._main.forEach((meal: Meal) => all.push(meal));
+        this._sub.forEach((meal: Meal) => all.push(meal));
         return all;
     }
 
     public getFoods = async (): Promise<void> =>  {
-        await Promise.allSettled(this.all().map((meal: Meal, _i) => meal.setFoods()));
+        await Promise.allSettled(this.all().map((meal: Meal) => meal.setFoods()));
     }
 
     public html() : string | null {

@@ -12,14 +12,14 @@ const main = async () => {
 
         await meals.getFoods();
     
-        meals.main.forEach((v , _i) => {
+        meals.main.forEach((v) => {
             console.log(v);
         });
         console.log("副菜");
-        meals.sub.forEach((v , i) => {
+        meals.sub.forEach((v) => {
             console.log(v);
         });
-        console.log(meals.html());
+        console.log(meals.tools);
     } catch(e){
         console.error(e);
     }
