@@ -36,6 +36,9 @@ export default class Meals {
         // extract step
         $('.tejun').children('tbody').children().each((_i: number, colElement: cheerio.Element) => {
             $(colElement).children().each((rowIndex: number, rowElement: cheerio.Element) => {
+                //iconc-checkmarkを洗浄に置き換える
+                $(rowElement).has('.icon-checkmark').children('span').replaceWith("洗浄");
+                //stepsを探して代入していく
                 let operation = $(rowElement).text();
                 if (rowIndex > 0 && operation.length > 0){
                     let targetTools: Tool[] = this._tools.filter(tool => tool.index === rowIndex);
@@ -44,6 +47,7 @@ export default class Meals {
                     } else {
                         let targetTool = targetTools.find( tool => operation.includes(tool.name));
                         if(targetTool){
+                            // tool名を削除する
                             let reg = new RegExp(`（${targetTool.name}）`);
                             this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name));
                         }
