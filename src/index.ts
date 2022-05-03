@@ -20,6 +20,7 @@ const main = async () => {
             console.log(v);
         });
         console.log(meals.tools);
+        console.log(meals.steps);
     } catch(e){
         console.error(e);
     }

@@ -1,5 +1,6 @@
 import cheerio from 'cheerio';
 import Meal from "./Meal";
+import RecipeStep from './RecipeStep';
 import Tool from './Tool';
 
 const RECIPE_SPEC_TAG = 'h3';
@@ -8,6 +9,7 @@ export default class Meals {
     private _main: Meal[] = []
     private _sub: Meal[] = []
     private _tools: Tool[] = []
+    private _steps: RecipeStep[] = [];
     private _content: cheerio.Cheerio
     constructor(body: string) {
         const $ = cheerio.load(body);
@@ -30,6 +32,26 @@ export default class Meals {
                 this._tools = this._tools.concat($(element).text().split('/').map(name => new Tool(i, name)));
             }
         });
+
+        // extract step
+        $('.tejun').children('tbody').children().each((_i: number, colElement: cheerio.Element) => {
+            $(colElement).children().each((rowIndex: number, rowElement: cheerio.Element) => {
+                let operation = $(rowElement).text();
+                if (rowIndex > 0 && operation.length > 0){
+                    let targetTools: Tool[] = this._tools.filter(tool => tool.index === rowIndex);
+                    if (targetTools.length === 1){
+                        this._steps.push(new RecipeStep(operation, targetTools[0].name));
+                    } else {
+                        let targetTool = targetTools.find( tool => operation.includes(tool.name));
+                        if(targetTool){
+                            let reg = new RegExp(`（${targetTool.name}）`);
+                            this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name));
+                        }
+                    }
+
+                }
+            });
+        });
     }
 
     public get main() {
@@ -41,6 +63,10 @@ export default class Meals {
     }
     public get tools(){
         return this._tools;
+    }
+
+    public get steps(){
+        return this._steps;
     }
 
     public all(): Meal[]{
