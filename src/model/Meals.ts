@@ -29,7 +29,7 @@ export default class Meals {
         // extract tools
         $('.tejun').children('thead').children().children().each((i: number, element: cheerio.Element) => {
             if (!$(element).text().includes("手順")){
-                this._tools = this._tools.concat($(element).text().split('/').map(name => new Tool(i, name)));
+                this._tools = this._tools.concat($(element).text().split('/').map(name => new Tool(i, name.split(/\d/)[0])));
             }
         });
 
@@ -50,6 +50,8 @@ export default class Meals {
                             // tool名を削除する
                             let reg = new RegExp(`（${targetTool.name}）`);
                             this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name));
+                        }else if (rowIndex === 1){
+                            this._steps.push(new RecipeStep(operation, targetTools[0].name));
                         }
                     }
 
