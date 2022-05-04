@@ -4,8 +4,8 @@ export default class Food {
     private _alias: string
     constructor(name: string, amount: string) {
         
-        this._name = name.replace(/(◎|◯)/,"");
-        this._alias = name.replace(this._name, "");
+        this._name = name.replace(/(◎|◯)/,"").replace(/（$/,"");
+        this._alias = name.replace(this._name, "").replace(/（$/,"");
         this._amount = amount.replace(/[Ａ-Ｚａ-ｚ０-９／]/g, (s) => {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
         }).replace("約","");
