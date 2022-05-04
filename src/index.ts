@@ -10,7 +10,7 @@ const main = async () => {
         const res = await axios.get(url, { timeout : 5000 });
         const meals: Meals = new Meals(res.data);
 
-        await meals.getFoods();
+        await meals.extractFoods();
     
         meals.main.forEach((v) => {
             console.log(v);
@@ -21,6 +21,7 @@ const main = async () => {
         });
         console.log(meals.tools);
         console.log(meals.steps);
+        console.log(meals.getFoods())
     } catch(e){
         console.error(e);
     }

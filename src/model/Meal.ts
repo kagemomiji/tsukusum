@@ -31,6 +31,10 @@ export default class Meal{
         return this._storeType;
     }
 
+    get foods(){
+        return this._foods;
+    }
+
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
             const res = await  axios.get(this._url, { timeout : 5000 });
@@ -66,11 +70,11 @@ export default class Meal{
             if(foodInfo.contents().first().is('a')){
                 let amount = foodInfo.children('span').first().text();
                 let name = foodInfo.children('a').first().text();
-                foods.push(new Food(name, amount));
+                foods.push(new Food(name, amount, this));
             } else {
                 let amount = foodInfo.children('span').first().text();
                 let name = foodInfo.contents().first().text();
-                foods.push(new Food(name, amount));
+                foods.push(new Food(name, amount, this));
             }
         });
         this._foods = foods;

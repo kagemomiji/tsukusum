@@ -1,4 +1,5 @@
 import cheerio from 'cheerio';
+import Food from './Food';
 import Meal from "./Meal";
 import RecipeStep from './RecipeStep';
 import Tool from './Tool';
@@ -82,8 +83,12 @@ export default class Meals {
         return all;
     }
 
-    public getFoods = async (): Promise<void> =>  {
+    public extractFoods = async (): Promise<void> =>  {
         await Promise.allSettled(this.all().map((meal: Meal) => meal.setFoods()));
+    }
+
+    public getFoods = () : Food[] => {
+        return this.all().flatMap(meal => meal.foods).sort((a, b) => (a.name.localeCompare(b.name)));
     }
 
     public html() : string | null {
