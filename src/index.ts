@@ -1,4 +1,5 @@
 import axios from 'axios';
+import PlantumlClient from './common/PlantumlClient';
 import Meal from './model/Meal';
 import Meals from './model/Meals';
 
@@ -23,6 +24,7 @@ const main = async () => {
         console.log(meals.steps);
         console.log(meals.getFoods())
         console.log(meals.getFoodUniqueNames())
+        console.log(PlantumlClient.makePlantumlURL(meals.getStepUML(),'svg'));
     } catch(e){
         console.error(e);
     }

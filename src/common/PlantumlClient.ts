@@ -3,10 +3,6 @@ import config from "config";
 
 const server: string = config.get('plantuml');
 
-
-const START_UML='@startuml';
-const END_UML='@enduml';
-
 export default class PlantumlClient {
   constructor() {
       

@@ -3,6 +3,7 @@ import Food from './Food';
 import Meal from "./Meal";
 import RecipeStep from './RecipeStep';
 import Tool from './Tool';
+import { PLANT_UML } from '../common/const/PlantUml';
 
 const RECIPE_SPEC_TAG = 'h3';
 
@@ -94,6 +95,17 @@ export default class Meals {
     public getFoodUniqueNames = () : string[] => {
         return [...new Set(this.getFoods().map(food => food.name))];
 
+    }
+
+    public getStepUML = (): string => {
+        let umlContent = this._steps.map( v => {
+            return `|${v.tool}|
+            :${v.operation};`
+        }).join("\n");
+        return `${PLANT_UML.START_UML}
+        ${umlContent}
+        ${PLANT_UML.END_UML}
+        `
     }
 
     public html() : string | null {
