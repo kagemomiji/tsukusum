@@ -67,13 +67,16 @@ export default class Meal{
         let foods : Food[] = [];
         $('#r_contents').children('p').each((_i:number, element: cheerio.Element) => {
             let foodInfo = $(element);
+            let amount: string;
+            let name: string;
             if(foodInfo.contents().first().is('a')){
-                let amount = foodInfo.children('span').first().text();
-                let name = foodInfo.children('a').first().text();
-                foods.push(new Food(name, amount, this));
+                amount = foodInfo.children('span').first().text();
+                name = foodInfo.children('a').first().text();
             } else {
-                let amount = foodInfo.children('span').first().text();
-                let name = foodInfo.contents().first().text();
+                amount = foodInfo.children('span').first().text();
+                name = foodInfo.contents().first().text();
+            }
+            if (amount.length > 0){
                 foods.push(new Food(name, amount, this));
             }
         });
