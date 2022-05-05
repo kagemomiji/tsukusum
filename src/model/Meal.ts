@@ -69,7 +69,11 @@ export default class Meal{
             let foodInfo = $(element);
             let amount: string;
             let name: string;
-            if(foodInfo.contents().first().is('a')){
+            //○<a href=xxxx> name</a> .... <span> amount </a>
+            if(['◎', '◯'].includes(foodInfo.contents().first().text())){
+                name = foodInfo.contents().first().text() + foodInfo.contents().first().next('a').text();
+                amount = foodInfo.children('span').first().text();
+            } else if(foodInfo.contents().first().is('a')){
                 amount = foodInfo.children('span').first().text();
                 name = foodInfo.children('a').first().text();
             } else {
