@@ -91,6 +91,11 @@ export default class Meals {
         return this.all().flatMap(meal => meal.foods).sort((a, b) => (a.name.localeCompare(b.name)));
     }
 
+    public getFoodUniqueNames = () : string[] => {
+        return [...new Set(this.getFoods().map(food => food.name))];
+
+    }
+
     public html() : string | null {
         return this._content.parents('#page_recipe').html();
     }

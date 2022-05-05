@@ -22,6 +22,7 @@ const main = async () => {
         console.log(meals.tools);
         console.log(meals.steps);
         console.log(meals.getFoods())
+        console.log(meals.getFoodUniqueNames())
     } catch(e){
         console.error(e);
     }
