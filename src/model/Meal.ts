@@ -35,6 +35,10 @@ export default class Meal{
         return this._foods;
     }
 
+    get steps(){
+        return this._steps;
+    }
+
     public setFoods = async (): Promise<void>  => {
         if(this._url !== undefined){
             const res = await  axios.get(this._url, { timeout : 5000 });

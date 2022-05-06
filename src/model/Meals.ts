@@ -43,17 +43,22 @@ export default class Meals {
                 //stepsを探して代入していく
                 let operation = $(rowElement).text();
                 if (rowIndex > 0 && operation.length > 0){
+                    let url = $(rowElement).find('a').attr('href');
                     let targetTools: Tool[] = this._tools.filter(tool => tool.index === rowIndex);
+                    let meal = url === undefined ? undefined : this.all().find(meal => meal.url === url);
+                    if(meal === undefined){ 
+                        meal = this.all().find( meal => operation.includes(meal.name));
+                    }
                     if (targetTools.length === 1){
-                        this._steps.push(new RecipeStep(operation, targetTools[0].name));
+                        this._steps.push(new RecipeStep(operation, targetTools[0].name, meal));
                     } else {
                         let targetTool = targetTools.find( tool => operation.includes(tool.name));
                         if(targetTool){
                             // tool名を削除する
                             let reg = new RegExp(`（${targetTool.name}）`);
-                            this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name));
+                            this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name, meal));
                         }else if (rowIndex === 1){
-                            this._steps.push(new RecipeStep(operation, targetTools[0].name));
+                            this._steps.push(new RecipeStep(operation, targetTools[0].name, meal));
                         }
                     }
 
@@ -99,8 +104,7 @@ export default class Meals {
 
     public getStepUML = (): string => {
         let umlContent = this._steps.map( v => {
-            return `|${v.tool}|
-            :${v.operation};`
+            return v.getUML();
         }).join("\n");
         return `${PLANT_UML.START_UML}
         ${umlContent}
