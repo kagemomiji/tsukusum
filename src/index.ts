@@ -1,7 +1,9 @@
 import axios from 'axios';
 import PlantumlClient from './common/PlantumlClient';
-import Meal from './model/Meal';
 import Meals from './model/Meals';
+import ejs from 'ejs';
+// tslint:disable-next-line:no-var-requires
+const html_to_pdf = require('html-pdf-node');
 
 const url = process.argv[2];
 console.log(url);
@@ -25,6 +27,12 @@ const main = async () => {
         console.log(meals.getFoods())
         console.log(meals.getFoodInfo())
         console.log(PlantumlClient.makePlantumlURL(meals.getStepUML(),'svg'));
+        let html = await ejs.renderFile('./src/resource/index.ejs',{foods: meals.getFoodInfo(), recipeUrl: PlantumlClient.makePlantumlURL(meals.getStepUML(),'svg')});
+        let options =  { format: "A3", path: "./output/tsukuoki.pdf", landscape: true };
+
+        html_to_pdf.generatePdf({content: html}, options). then((output: any) => {
+            console.log("PDF Buffer:-", output);
+        });
     } catch(e){
         console.error(e);
     }
