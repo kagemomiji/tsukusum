@@ -23,7 +23,7 @@ const main = async () => {
         console.log(meals.tools);
         console.log(meals.steps);
         console.log(meals.getFoods())
-        console.log(meals.getFoodUniqueNames())
+        console.log(meals.getFoodInfo())
         console.log(PlantumlClient.makePlantumlURL(meals.getStepUML(),'svg'));
     } catch(e){
         console.error(e);

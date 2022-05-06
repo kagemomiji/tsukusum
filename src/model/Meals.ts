@@ -103,6 +103,16 @@ export default class Meals {
 
     }
 
+    public getFoodInfo = () : Food[] => {
+        let foodNameList = this.getFoodUniqueNames();
+        let foodInfo: Food[] = [];
+        for (const foodName of foodNameList){
+            let amount = this.getFoods().filter(food => food.name === foodName).map(food => {return `${food.amount}`}).join(" + ");
+            foodInfo.push(new Food(foodName, amount));
+        }
+        return foodInfo;
+    }
+
     public getStepUML = (): string => {
         let umlContent = this._steps.map( v => {
             return v.getUML();
