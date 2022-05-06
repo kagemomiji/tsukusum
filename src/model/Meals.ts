@@ -17,13 +17,14 @@ export default class Meals {
         const $ = cheerio.load(body);
         // extrat meal
         let isSubMeal: boolean = false;
-        this._content = $('section').has('#step1').children('#page_recipe').children().children();
-        this._content.children().each( (_i: number, element: cheerio.Element) => {
+        this._content = $('section').has('#step1').children('#page_recipe').children().find('p,h3');
+        this._content.each( (_i: number, element: cheerio.Element) => {
             if (element.type === "tag" &&  element.name === RECIPE_SPEC_TAG && $(element).text() === "副菜"){
                 isSubMeal = true;
             }
             if (element.type === "tag" && element.name !== RECIPE_SPEC_TAG){
-                let meal = new Meal($(element).text(), $(element).find('a').attr('href'))
+                let url = $(element).find('a').attr('href');
+                let meal = new Meal($(element).text(), url)
                 if (isSubMeal) this._sub.push(meal);
                 else this._main.push(meal);
             }
