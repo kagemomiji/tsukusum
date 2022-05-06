@@ -31,8 +31,11 @@ export default class RecipeStep {
         } else {
             return `|${this._tool}|
             partition ${this._operation} \{
+                note 
+                ${this.meal.foods.map(food => {return food.toString()}).join('\n')}
+                end note
                 ${this.meal.steps.map(step => {return `:${step.match(/.{1,20}/g)?.join('\\n')};`}).join('\n')}
-            \}`
+            \}`.replace(/  +/g, '')
         }
 
     }
