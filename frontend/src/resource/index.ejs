@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="content">
+    <div id="foods">
+        <h2>食材</h2>
+        <ul>
+        <%_ for (const food of foods) { _%>
+          <li><%= food.toString() %></li>
+        <%_ } _%>
+        </ul>
+    </div>
+    <div id="recipe">
+        <h2>レシピ</h2>
+        <img src="<%= recipeUrl %>"/>
+    </div>
+</div>
+</body>
+</html>

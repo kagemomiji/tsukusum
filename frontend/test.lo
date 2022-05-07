@@ -1,0 +1,1471 @@
+
+> tsukuoki@0.0.1 start
+> node dist/index.js $npm_config_url
+
+https://cookien.com/tsukurioki/35810/
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: '鶏ももひき肉',
+      _alias: '',
+      _amount: '250g',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '小ねぎ',
+      _alias: '',
+      _amount: '1/3束（50g）',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'しょうが',
+      _alias: '',
+      _amount: '1かけ',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '顆粒こんぶだし',
+      _alias: '◯',
+      _amount: '1/2本',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩',
+      _alias: '◯',
+      _amount: '少々',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'キャベツ',
+      _alias: '',
+      _amount: '1/8玉（150g）',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'にんじん',
+      _alias: '',
+      _amount: '1/3本（50g）',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'もやし',
+      _alias: '',
+      _amount: '1/4袋（50g）',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '顆粒こんぶだし',
+      _alias: '◎',
+      _amount: '1/2本',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩',
+      _alias: '◎',
+      _amount: '小1/2',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '醤油',
+      _alias: '◎',
+      _amount: '小1/2',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '水',
+      _alias: '◎',
+      _amount: '350mL',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '片栗粉',
+      _alias: '●',
+      _amount: '小2.5',
+      _mealName: '鶏肉だんごと野菜スープ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '水',
+      _alias: '●',
+      _amount: '小2.5',
+      _mealName: '鶏肉だんごと野菜スープ'
+    }
+  ],
+  _steps: [
+    '小ねぎは小口切りにします。しょうがはみじん切りにします。ボウルに鶏ひき肉、小ねぎ、しょうが、顆粒こんぶだし(1/2本)と塩(少々)を入れ、よくこねます。',
+    'キャベツは食べやすい大きさに切ります。にんじんは３～４ｃｍ長さの薄切りにします。片栗粉(小2.5)と水(小2.5)は混ぜ合わせ、水溶き片栗粉を作ります。',
+    '鍋ににんじん、キャベツ、もやし、顆粒こんぶだし(1/2本)と塩(小1/2)と醤油(小1/2)と水(350mL)を順番に入れ、ふたをして弱～中火で３分ほど煮ます。',
+    'ふたを取り、鍋の野菜を端によせ、あいたスペースに肉だんごを手で丸めて入れます。すべて入れたら、中火で３分ほど煮ます。',
+    '火を弱め、水溶き片栗粉でとろみをつけて、完成。'
+  ],
+  _storeLimit: '4日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: '鶏肉だんごと野菜スープ',
+  _url: 'https://cookien.com/recipe/19946/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: '鶏むね肉',
+      _alias: '',
+      _amount: '350g',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'たまねぎ',
+      _alias: '',
+      _amount: '1/2個（150g）',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'しょうが',
+      _alias: '',
+      _amount: '2かけ（20g）',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '砂糖',
+      _alias: '◯',
+      _amount: '大1/2',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩',
+      _alias: '◯',
+      _amount: '小1/2',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '片栗粉',
+      _alias: '',
+      _amount: '大1',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '醤油',
+      _alias: '◎',
+      _amount: '大1.5',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'はちみつ',
+      _alias: '◎',
+      _amount: '大1.5',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'みりん',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '小ねぎ',
+      _alias: '',
+      _amount: 'お好みで',
+      _mealName: '鶏むね肉のはちみつしょうが焼き'
+    }
+  ],
+  _steps: [
+    '鶏肉は室温に戻します。余分な脂を取り除き、お好みで皮も取ります。繊維を断つようにしてひとくち大に切り、砂糖(大1/2)と塩(小1/2)との砂糖と塩を順番によくすり込みます。',
+    'たまねぎは皮をむき、薄切りにします。しょうがは皮をむき、すりおろします。',
+    'フライパンに油大1を中火で熱し、たまねぎをすき通るまで炒めます。鶏むね肉に片栗粉を薄くまぶし、両面とも焼きます。',
+    '弱火にし、スペースをあけて醤油(大1.5)とはちみつ(大1.5)とみりん(大1)と、しょうがを入れ、フライパンの中で混ぜ合わせます。',
+    '再び中火にし、全体に味がからむように炒め合わせて、完成。',
+    '食べるときに、お好みで小ねぎを散らします。'
+  ],
+  _storeLimit: '5日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: '鶏むね肉のはちみつしょうが焼き',
+  _url: 'https://cookien.com/recipe/8927/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: '鶏もも肉',
+      _alias: '',
+      _amount: '400g',
+      _mealName: 'チキンケバブ（下味まで）'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'オリーブオイル',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: 'チキンケバブ（下味まで）'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'ヨーグルト',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: 'チキンケバブ（下味まで）'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩',
+      _alias: '◎',
+      _amount: '小2/3',
+      _mealName: 'チキンケバブ（下味まで）'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'クミン',
+      _alias: '◎',
+      _amount: '小1/2',
+      _mealName: 'チキンケバブ（下味まで）'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'にんにくチューブ',
+      _alias: '◎',
+      _amount: '5cm',
+      _mealName: 'チキンケバブ（下味まで）'
+    }
+  ],
+  _steps: [
+    '鶏肉は余分な脂を取り除き、食べやすく小さめに切ります。',
+    'ジッパー付き保存袋にオリーブオイル(大1)とヨーグルト(大1)と塩(小2/3)とクミン(小1/2)とにんにくチューブ(5cm)とを入れ、袋の上から手でもんでよく混ぜ合わせます。鶏肉を入れ、たれが全体にいきわたるようにもみ込みます。空気を抜いてジッパーをしめ、平たくして漬け込みます。作り置きの場合、この状態で冷蔵冷凍保存します。',
+    '冷蔵庫から出して、室温に戻します。オーブンは220度に予熱します。',
+    '天板にクッキングシートをしきます。鶏肉をポリ袋から取り出し、皮目を上にして並べます。',
+    '220度で15分ほど焼いて、完成。ケバブソースをかけて召し上がってください。'
+  ],
+  _storeLimit: '4日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: 'チキンケバブ（下味まで）',
+  _url: 'https://cookien.com/recipe/864/',
+  _storeType: '冷蔵'
+}
+副菜
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'さつまいも',
+      _alias: '',
+      _amount: '1本（200g）',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'ごぼう',
+      _alias: '',
+      _amount: '1本（100g）',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '鶏もも肉',
+      _alias: '',
+      _amount: '100g',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'みりん',
+      _alias: '◎',
+      _amount: '大2',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '砂糖',
+      _alias: '◎',
+      _amount: '大1.5',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '醤油',
+      _alias: '◎',
+      _amount: '大1.5',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '水',
+      _alias: '◎',
+      _amount: '200mL',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '小ねぎ',
+      _alias: '',
+      _amount: 'お好みで',
+      _mealName: '根菜と鶏肉の甘辛煮'
+    }
+  ],
+  _steps: [
+    'さつまいもはよく洗って、長さ４～５ｃｍ、幅１〜２ｃｍ程度に切り、水にさらしてアクを取ります。ごぼうは皮をむき、長さ４～５ｃｍ、幅１ｃｍ程度に切り、水にさらしてアクを取ります。',
+    '１をざるにあげ、水気を切ります。鶏肉は余分な脂を取り除き、１〜２ｃｍ角に切ります。',
+    '鍋に、ごぼう、さつまいも、鶏肉の順に入れ、みりん(大2)と砂糖(大1.5)と醤油(大1.5)と水(200mL)を入れて落しぶたをし、煮立ったら弱火で１５分煮ます。',
+    '落としぶたをあけて、煮汁がほどよくなくなるくらいまで煮たら、完成。お好みで小ねぎを散らします。'
+  ],
+  _storeLimit: '5日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: '根菜と鶏肉の甘辛煮',
+  _url: 'https://cookien.com/recipe/8914/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'きゅうり',
+      _alias: '',
+      _amount: '3本',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩（板ずり用）',
+      _alias: '',
+      _amount: '小1/2',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '金ごま',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '醤油',
+      _alias: '◎',
+      _amount: '小2',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'ごま油',
+      _alias: '◎',
+      _amount: '小1',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'うまみ調味料',
+      _alias: '◎',
+      _amount: '小1',
+      _mealName: '金ごまきゅうり'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'にんにくチューブ',
+      _alias: '◎',
+      _amount: '3cm',
+      _mealName: '金ごまきゅうり'
+    }
+  ],
+  _steps: [
+    'きゅうりは塩をふり、板ずりをします。両端を切り落とし、3～4等分の長さに切ります。ポリ袋に入れ、めん棒などで叩き、10分～ひと晩おいて水分を出します。',
+    'ポリ袋から出してざるにあげ、しっかりと水気を切ります。',
+    '保存容器かポリ袋で金ごま(大1)と醤油(小2)とごま油(小1)とうまみ調味料(小1)とにんにくチューブ(3cm)とを混ぜ合わせます。きゅうりを入れ、よく和えて、完成。'
+  ],
+  _storeLimit: '3日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: '金ごまきゅうり',
+  _url: 'https://cookien.com/recipe/7381/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'ピーマン',
+      _alias: '',
+      _amount: '1袋（4～5個）',
+      _mealName: 'ピーマンとソーセージのコンソメ炒め'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'ソーセージ',
+      _alias: '',
+      _amount: '1袋（5～6本）',
+      _mealName: 'ピーマンとソーセージのコンソメ炒め'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '顆粒コンソメ',
+      _alias: '◎',
+      _amount: '小1/2',
+      _mealName: 'ピーマンとソーセージのコンソメ炒め'
+    }
+  ],
+  _steps: [
+    'ピーマンはへたと種を取り、縦に細切りにします。ソーセージは斜め薄切りにします。',
+    'フライパンに油を熱し、中火でピーマンとソーセージに薄く焼き色がつくまで焼きます。',
+    'コンソメを入れ、味がまんべんなくいきわたるよう炒め合わせて、完成。'
+  ],
+  _storeLimit: '5日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: 'ピーマンとソーセージのコンソメ炒め',
+  _url: 'https://cookien.com/recipe/15616/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'かぼちゃ',
+      _alias: '',
+      _amount: '1/4個',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'パン粉',
+      _alias: '◯',
+      _amount: '適量（3/4カップくらい）',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'オイル',
+      _alias: '◯',
+      _amount: '適量',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'マヨネーズ',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'カレー粉',
+      _alias: '◎',
+      _amount: '小2',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'コンソメ',
+      _alias: '◎',
+      _amount: '小1',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩',
+      _alias: '◎',
+      _amount: '少々',
+      _mealName: 'かぼちゃのカレースコップコロッケ'
+    }
+  ],
+  _steps: [
+    'オーブンは２００度で余熱しておきます。かぼちゃは種を取り、一口大に切り、皮も所々削いでおきます。',
+    '１を耐熱容器に入れて、ふわりとラップをかけてレンジで５〜６分加熱します。',
+    '２をマッシャー等ですりつぶし、マヨネーズ(大1)とカレー粉(小2)とコンソメ(小1)と塩(少々)を加え混ぜ合わせます。',
+    '耐熱容器の内側に油を塗り、３を入れて、混ぜ合わせたパン粉(適量（3/4カップくらい）)とオイル(適量)を上からかけ広げます。',
+    '２００度のオーブンで２０分程度焼き、完成。'
+  ],
+  _storeLimit: '5日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: 'かぼちゃのカレースコップコロッケ',
+  _url: 'https://cookien.com/recipe/5956/',
+  _storeType: '冷蔵'
+}
+Meal {
+  _foods: [
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'キャベツ',
+      _alias: '',
+      _amount: '1/2玉（500g）',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'にんじん',
+      _alias: '',
+      _amount: '1/3本（50g）',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'コーン',
+      _alias: '',
+      _amount: '50g',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '塩（塩もみ用）',
+      _alias: '',
+      _amount: '小1',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '穀物酢',
+      _alias: '◎',
+      _amount: '大3',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '砂糖',
+      _alias: '◎',
+      _amount: '大3',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'マヨネーズ',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: '油',
+      _alias: '◎',
+      _amount: '大1',
+      _mealName: '基本のコールスロー'
+    },
+    Food {
+      toString: [Function (anonymous)],
+      _name: 'レモン汁',
+      _alias: '◎',
+      _amount: '大1/2',
+      _mealName: '基本のコールスロー'
+    }
+  ],
+  _steps: [
+    'キャベツは水洗いして水気を切り、せん切りにします。にんじんは皮をむき、長さ2～3cmのせん切りにします。',
+    'ボウルにキャベツ、にんじん、塩を入れ、もみ込みます。ざるにあげて10～20分ほど置いておき、手でしぼってしっかりと水気を切ります。',
+    'ボウルに穀物酢(大3)と砂糖(大3)とマヨネーズ(大1)と油(大1)とレモン汁(大1/2)とを入れ、よく混ぜ合わせます。2、コーンを入れ、全体に味がいきわたるよう和えて、完成。'
+  ],
+  _storeLimit: '3日',
+  setFoods: [Function (anonymous)],
+  getFoodsByAlias: [Function (anonymous)],
+  getAliasList: [Function (anonymous)],
+  _name: '基本のコールスロー',
+  _url: 'https://cookien.com/recipe/4699/',
+  _storeType: '冷蔵'
+}
+[
+  Tool { _index: 1, _name: '火を使わない' },
+  Tool { _index: 2, _name: 'フライパン' },
+  Tool { _index: 2, _name: 'オーブン' },
+  Tool { _index: 3, _name: '両手鍋' }
+]
+[
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '肉だんごのたねを作る',
+    _tool: '火を使わない',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'チキンケバブ（下味まで）',
+    _tool: '火を使わない',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '4日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: 'チキンケバブ（下味まで）',
+      _url: 'https://cookien.com/recipe/864/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'ケバブ以外の鶏肉の下ごしらえ',
+    _tool: '火を使わない',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'きゅうりを塩もみする',
+    _tool: '火を使わない',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'キャベツ、にんじんを塩もみする',
+    _tool: '火を使わない',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '根菜と鶏肉の甘辛煮（フライパンⅠ）',
+    _tool: 'フライパン',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '5日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: '根菜と鶏肉の甘辛煮',
+      _url: 'https://cookien.com/recipe/8914/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'かぼちゃをレンジ加熱する',
+    _tool: '火を使わない',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'ピーマンとソーセージのコンソメ炒め（フライパンⅡ）',
+    _tool: 'フライパン',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '5日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: 'ピーマンとソーセージのコンソメ炒め',
+      _url: 'https://cookien.com/recipe/15616/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: 'かぼちゃのカレースコップコロッケ',
+    _tool: 'オーブン',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '5日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: 'かぼちゃのカレースコップコロッケ',
+      _url: 'https://cookien.com/recipe/5956/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '鶏肉だんごと野菜スープ',
+    _tool: '両手鍋',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '4日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: '鶏肉だんごと野菜スープ',
+      _url: 'https://cookien.com/recipe/19946/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '洗浄（フライパンⅡ）',
+    _tool: 'フライパン',
+    _meal: undefined
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '鶏むね肉のはちみつしょうが焼き（フライパンⅡ）',
+    _tool: 'フライパン',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '5日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: '鶏むね肉のはちみつしょうが焼き',
+      _url: 'https://cookien.com/recipe/8927/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '金ごまきゅうり（和える）',
+    _tool: '火を使わない',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '3日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: '金ごまきゅうり',
+      _url: 'https://cookien.com/recipe/7381/',
+      _storeType: '冷蔵'
+    }
+  },
+  RecipeStep {
+    getUML: [Function (anonymous)],
+    _operation: '基本のコールスロー（和える）',
+    _tool: '火を使わない',
+    _meal: Meal {
+      _foods: [Array],
+      _steps: [Array],
+      _storeLimit: '3日',
+      setFoods: [Function (anonymous)],
+      getFoodsByAlias: [Function (anonymous)],
+      getAliasList: [Function (anonymous)],
+      _name: '基本のコールスロー',
+      _url: 'https://cookien.com/recipe/4699/',
+      _storeType: '冷蔵'
+    }
+  }
+]
+[
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'うまみ調味料',
+    _alias: '◎',
+    _amount: '小1',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'オイル',
+    _alias: '◯',
+    _amount: '適量',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'オリーブオイル',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'かぼちゃ',
+    _alias: '',
+    _amount: '1/4個',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'カレー粉',
+    _alias: '◎',
+    _amount: '小2',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'キャベツ',
+    _alias: '',
+    _amount: '1/8玉（150g）',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'キャベツ',
+    _alias: '',
+    _amount: '1/2玉（500g）',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'きゅうり',
+    _alias: '',
+    _amount: '3本',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'クミン',
+    _alias: '◎',
+    _amount: '小1/2',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'コーン',
+    _alias: '',
+    _amount: '50g',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ごぼう',
+    _alias: '',
+    _amount: '1本（100g）',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ごま油',
+    _alias: '◎',
+    _amount: '小1',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'コンソメ',
+    _alias: '◎',
+    _amount: '小1',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'さつまいも',
+    _alias: '',
+    _amount: '1本（200g）',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'しょうが',
+    _alias: '',
+    _amount: '1かけ',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'しょうが',
+    _alias: '',
+    _amount: '2かけ（20g）',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ソーセージ',
+    _alias: '',
+    _amount: '1袋（5～6本）',
+    _mealName: 'ピーマンとソーセージのコンソメ炒め'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'たまねぎ',
+    _alias: '',
+    _amount: '1/2個（150g）',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんじん',
+    _alias: '',
+    _amount: '1/3本（50g）',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんじん',
+    _alias: '',
+    _amount: '1/3本（50g）',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんにくチューブ',
+    _alias: '◎',
+    _amount: '5cm',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんにくチューブ',
+    _alias: '◎',
+    _amount: '3cm',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'はちみつ',
+    _alias: '◎',
+    _amount: '大1.5',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'パン粉',
+    _alias: '◯',
+    _amount: '適量（3/4カップくらい）',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ピーマン',
+    _alias: '',
+    _amount: '1袋（4～5個）',
+    _mealName: 'ピーマンとソーセージのコンソメ炒め'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'マヨネーズ',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'マヨネーズ',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'みりん',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'みりん',
+    _alias: '◎',
+    _amount: '大2',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'もやし',
+    _alias: '',
+    _amount: '1/4袋（50g）',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ヨーグルト',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'レモン汁',
+    _alias: '◎',
+    _amount: '大1/2',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '◯',
+    _amount: '少々',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '◎',
+    _amount: '小1/2',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '◯',
+    _amount: '小1/2',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '◎',
+    _amount: '小2/3',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '◎',
+    _amount: '少々',
+    _mealName: 'かぼちゃのカレースコップコロッケ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩（塩もみ用）',
+    _alias: '',
+    _amount: '小1',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩（板ずり用）',
+    _alias: '',
+    _amount: '小1/2',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '小ねぎ',
+    _alias: '',
+    _amount: '1/3束（50g）',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '小ねぎ',
+    _alias: '',
+    _amount: 'お好みで',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '小ねぎ',
+    _alias: '',
+    _amount: 'お好みで',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '水',
+    _alias: '◎',
+    _amount: '350mL',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '水',
+    _alias: '●',
+    _amount: '小2.5',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '水',
+    _alias: '◎',
+    _amount: '200mL',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '油',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '片栗粉',
+    _alias: '●',
+    _amount: '小2.5',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '片栗粉',
+    _alias: '',
+    _amount: '大1',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '砂糖',
+    _alias: '◯',
+    _amount: '大1/2',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '砂糖',
+    _alias: '◎',
+    _amount: '大1.5',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '砂糖',
+    _alias: '◎',
+    _amount: '大3',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '穀物酢',
+    _alias: '◎',
+    _amount: '大3',
+    _mealName: '基本のコールスロー'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '醤油',
+    _alias: '◎',
+    _amount: '小1/2',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '醤油',
+    _alias: '◎',
+    _amount: '大1.5',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '醤油',
+    _alias: '◎',
+    _amount: '大1.5',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '醤油',
+    _alias: '◎',
+    _amount: '小2',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '金ごま',
+    _alias: '◎',
+    _amount: '大1',
+    _mealName: '金ごまきゅうり'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '顆粒コンソメ',
+    _alias: '◎',
+    _amount: '小1/2',
+    _mealName: 'ピーマンとソーセージのコンソメ炒め'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '顆粒こんぶだし',
+    _alias: '◯',
+    _amount: '1/2本',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '顆粒こんぶだし',
+    _alias: '◎',
+    _amount: '1/2本',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏むね肉',
+    _alias: '',
+    _amount: '350g',
+    _mealName: '鶏むね肉のはちみつしょうが焼き'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏ももひき肉',
+    _alias: '',
+    _amount: '250g',
+    _mealName: '鶏肉だんごと野菜スープ'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏もも肉',
+    _alias: '',
+    _amount: '400g',
+    _mealName: 'チキンケバブ（下味まで）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏もも肉',
+    _alias: '',
+    _amount: '100g',
+    _mealName: '根菜と鶏肉の甘辛煮'
+  }
+]
+[
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'うまみ調味料',
+    _alias: '',
+    _amount: '小1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'オイル',
+    _alias: '',
+    _amount: '適量'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'オリーブオイル',
+    _alias: '',
+    _amount: '大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'かぼちゃ',
+    _alias: '',
+    _amount: '1/4個'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'カレー粉',
+    _alias: '',
+    _amount: '小2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'キャベツ',
+    _alias: '',
+    _amount: '1/8玉（150g） + 1/2玉（500g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'きゅうり',
+    _alias: '',
+    _amount: '3本'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'クミン',
+    _alias: '',
+    _amount: '小1/2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'コーン',
+    _alias: '',
+    _amount: '50g'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ごぼう',
+    _alias: '',
+    _amount: '1本（100g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ごま油',
+    _alias: '',
+    _amount: '小1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'コンソメ',
+    _alias: '',
+    _amount: '小1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'さつまいも',
+    _alias: '',
+    _amount: '1本（200g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'しょうが',
+    _alias: '',
+    _amount: '1かけ + 2かけ（20g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ソーセージ',
+    _alias: '',
+    _amount: '1袋（5～6本）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'たまねぎ',
+    _alias: '',
+    _amount: '1/2個（150g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんじん',
+    _alias: '',
+    _amount: '1/3本（50g） + 1/3本（50g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'にんにくチューブ',
+    _alias: '',
+    _amount: '5cm + 3cm'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'はちみつ',
+    _alias: '',
+    _amount: '大1.5'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'パン粉',
+    _alias: '',
+    _amount: '適量（3/4カップくらい）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ピーマン',
+    _alias: '',
+    _amount: '1袋（4～5個）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'マヨネーズ',
+    _alias: '',
+    _amount: '大1 + 大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'みりん',
+    _alias: '',
+    _amount: '大1 + 大2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'もやし',
+    _alias: '',
+    _amount: '1/4袋（50g）'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'ヨーグルト',
+    _alias: '',
+    _amount: '大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: 'レモン汁',
+    _alias: '',
+    _amount: '大1/2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩',
+    _alias: '',
+    _amount: '少々 + 小1/2 + 小1/2 + 小2/3 + 少々'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩（塩もみ用）',
+    _alias: '',
+    _amount: '小1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '塩（板ずり用）',
+    _alias: '',
+    _amount: '小1/2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '小ねぎ',
+    _alias: '',
+    _amount: '1/3束（50g） + お好みで + お好みで'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '水',
+    _alias: '',
+    _amount: '350mL + 小2.5 + 200mL'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '油',
+    _alias: '',
+    _amount: '大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '片栗粉',
+    _alias: '',
+    _amount: '小2.5 + 大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '砂糖',
+    _alias: '',
+    _amount: '大1/2 + 大1.5 + 大3'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '穀物酢',
+    _alias: '',
+    _amount: '大3'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '醤油',
+    _alias: '',
+    _amount: '小1/2 + 大1.5 + 大1.5 + 小2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '金ごま',
+    _alias: '',
+    _amount: '大1'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '顆粒コンソメ',
+    _alias: '',
+    _amount: '小1/2'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '顆粒こんぶだし',
+    _alias: '',
+    _amount: '1/2本 + 1/2本'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏むね肉',
+    _alias: '',
+    _amount: '350g'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏ももひき肉',
+    _alias: '',
+    _amount: '250g'
+  },
+  Food {
+    toString: [Function (anonymous)],
+    _name: '鶏もも肉',
+    _alias: '',
+    _amount: '400g + 100g'
+  }
+]
+https://pm.tri-comfort.info/svg/bLdRKXlB5NtdA_melyH8WbJAVZaVa4_GIoevbJfLiKugSPvoKgMUaK0Ni43SZB416HaaouYR3G8ByozfpOpqn2zaxTtTevwHX0b5gQIPwUvzNNljFJ_zyzMV_l7gNo__DlD4__qMYBPqQltRE-bKfVWaHVwty2RzFHyu9IdsfRCcnReK7Idsf3Zc9U-aKtanCt67l-EONrxzyclsYNI5T8wbUo6TC-ckI7VplbViTolUweKKtwKukk-Ldlnx9llhgv-Vp0mlgz9ny8z34tEpitzzEYETJzB5VmyhwRlJa6uxuJMEahZdDkc6SufBqYtggrwzbV1EgwbdQLfz8jqzd4vNaizIk4BIhj6dg99ixaUrTsB-po-VploS_SiJ4cNcEKHXpK_wjzjUSG6A3VAGhEPL8KPvkDsGObdcnF00vhYMJbwARUo8KwJOo6Ib8t24Lrp4iwpcjimvBsQUIwShNLUwgpYq_-qDzkZVlVUEtmm-L5YmQRfcia-bQ4xK5zSjZV6BJezfJMkdwft9GdDw0ieLFafd2MgnF9r-5y9Nf5FoI_XvnAvPuoz5x9B9-bTNKhppLehi-PrGKMqxQp-A6dmHIrwXsRybCI2bo9CDQIbkLdZJ1HRJaU9kyBs7pt3Be7NZdsvXIx_y3WjfzQ5jJDoHOelCdXFUzGL7QPMkY4E_zrcALNi_hCuv7B_buBP3GeYEj_-5525H8LudA5_w1LBQMxWQh7_5fxUeVKLdRzbErO_Sj9MnlCKRTJ29qcdutHQKyelVx5NiQJ8_DaDgY9DKQjQxESI3_PjYi70MFw7Hyj_ViMrEI6MTKAVIkU9jYbfzqYJk0phXFSAANShoSGHhANCYUDi9TZgKmUJjjXAztpsai1RVILajX17nA3dF2G65Ma6-nsvKkYxvnHLMJcSwHU8jE-UQ1OG0gtZMgy8XMtmSGkA0LfElzf4vj1aTzf-P7mDJU4p_sqUliGcdcPn5u5OOhH0G-5byyPZTA1GB5878M4HklQNYaDIV2dCnUU2L0-bkIpVFSQGIxWrzJjfGkXlIRN6I8u8lRD3qzwy7LSHvCzGeM7yp-BuJ53f0pzZ2_nRsRGnbApOu3l8uCP7qttt6eXJG58yH0C8myDg2kPCqToBecrJe2td97ck4DK3FODy9BZOPU7utZnKB3V_yElpfdtv9u9oNVmG84n0UI_4w8KNP-tZBYX_P01kJ4pcWOCN_igM30kYw0O3PkE-jtz_ktlSsxc_T-rj2tKpMkoxSzrPbxjrzhwOk1ysAoY2DkZa1SJYWDpWAE2ET3yWW2akDuwE4D5Q17CW82bSdfo4-AaGc6ugXXFY_ZbVWF7OyqelKeIJP92oaTP2ffhPHo1Uh9dQ1WZscbwYOdGP7jLXfOZY41CDbFfX2rnY3laVT17kOc1pk4rmhZASzH2nQ4B_HUA60veZ9PArBewWPLGnnE5YvrK1xoVMXfj6gq0dQ5GwGFSAotXdb9R68LVW6Li03KQsm4PS_UoT70P7QppyJ34I4Poe4ERtfaxnLeQ-aRrxn5Jw0pev0dXNaOUXpdFaR1yR_eQyVXMw4bl11NJekoUn-PiZlUkLzhWy_1X7fhdDnsEKAqpHG_8q_kqJbd0lU4zVh0GMyc0GkzGYuM7icaYWfM367l9ZtSXM5Bj5Jp3FpUERt33U4C_M5uBncdnwoCmiU8jAVID7bcjuCcfrH-i1_LAZQmPTJ4z1Km2Xmma8Rq_h4tqJT5uFDlBqYmj6Y5g3YVKxrIvVbdEXtZrNGZLkOYgrzMXld87wuJ2uFIkSSQ0qEBeublXubY2Ehs0IAwV8IFKarvPe_LP2EI9IALgPHofqMCuiKQ8x0a8B4myOEF0gIDiUUAk8NJBYs-CinCv4pg_2C5YQIp-OG4aJHoOR1UIan5AtXOXMna7usnvloHYQtTF0OpgiUfkMxJ7gNMO0Rm_kDJBGl4L-w58icqmS0-mgHkBBKHZGGBFPMyA-e3R3Ki2_yBDlEWNeKLw5bJcAHsE_clEe11BHh09SIno_b80L0kbHcVnt5jWxHVv1RmV5UvzhRReRGgfmdnLVo9GLiay9J-w6cnM8uCnZ1UBZ1eBy9I3IGiHKziCQmiijUl6BcqWkEIopTDf_JOCIaY8-vGSEtQXhYhk2BKMTaibQRmWuXmvL1-8hJMWW2xeWnEjv2mHDVmcpqwblAnFUzDRjkKCMykYAJsBlkFIeEkIUXI6GTOh5e67A50vQeh7VZKecEaEHeF7MYqNQaxbALOhQWqzzafgvOoCr-juwM2_NOJanJTyDUl3bSV4qq4Ob9PsoDjz5Id1FkWCwbvedEZLXPybdQVxz7o1pIGjXpaGdGKYAf50oX6YqHdNd997qBYrF0ycY6sUmN3_mXU5qYRZdQViI6-N2cdk5TaZQljfxJ5SEGqaT8e6g78QFw9z6Az3oJqQ2qwEzlcGWrJDLy7s53Q1vaDxvJEa-g4RQfk3IXwbDNwAnDVjo5YmwfPHTjyepn2VdTeWgKujQ-u5aFQSvzVYoXmcPRavWrtjkkBLQ38awYeuiy8zSoqxtuu4Arws4pGwYvncHuNL5AnP0HxjEgQYOxvW9D_C9V9me9e5IOjOhxta3pvN2v6Jn5gBCchdR3bHFnTio4MCoobBlZjhNYAa9QmqkZw8948CB1nYS5s6Ie9OtN8Mz5pzixWyL2vW03ZdfemrYrbyp2iBAmUXsJxBMWVSAg5fMDcCtcUSarqO-tkbQ3UzXe0IRAGvn-jyl3gKE3cA6FYJ5Jpn_UqIJtCK8hEWibrGHcWj-eh01Kbxb7g75nqHGSBeyIapYbZV1Yj8V-r_mqelem8sPSH5TthFeNpjqwfs_3pZq5op_amlPk50lSBk-nLJJ4ffWLso1eOMnAOIotvkgsrImHWDdOPgKFCw1OusrhObsqkh7aOrhoiAMSDhPwO1Qg4MoqiQ8-iJutk2u7bpGzzZUFoUfcvgTRlKC6noQZLprEfIBMiV1lDE7ig6TK_jfvQH2HGjmfnqQBd7CZluqF0AQXcd8dYQuhGMoTuL5b3liVznYa6hCCdMzXms6Bnqqb8_RoCFUMsrFk99ZmsyC1AzBROVZmQjMJyBENfgEf3zz_u0HrndiIqsItjJJ4DzvQOptTJKTYKW-i9yGbNuv49bcm6Qz_TZsB6wi34q7dyOeH6Sf2XmjZIorwE7qsxHIJEHZAnA4oOsJBMEVqt9JD2YkoR2Oc4_h_yUv_nF0UVcaoN5nbXlVTdae2ARmQP8PabUZ0R_HC8cre4PxcaV5R6dAlDx5WH9JCxZ4mKOqKtp54Yduli1ntWqzti9g_kHtUcF928HrzaH8Ph09QE3Evc-4XcP7HL4g3DDqwwfoQr77kZSOuEP56APr3hy9Or37iOtocPGs-snOxml-QVr1ZixV8OTMMIjZaB7Qa-TwkmY5_kyMT6WsuKTBeE8YZn_jsCaVdw-7yVsoMnzSF-B6o8X6PxCJX7dPLBnjC-rEn3ZcAEJ1aA0a4hcd1ecxaAvCSgLkp1vsftWrDpxRuw3pAGtNCJYpr3sU1jtU3Q3Q3gXunQ88UqBhUr5o8TY4frONCppwo2r77N2HKiyH95CxjhIH2FMxbWb9hMFX07aZRfJizRMXXi97kes7-W7FyCn5MUtj24Q7fnALe99xNRxDYus0AgfsmzI0eZTMejatS9uwsKmZuDBq5P4wqCwsFuKWVjJ8FlUu0OdAQMw7Wa6Znjthn3167oLa8aveDUIOw1tf3bn_DOu0PwcqaYTOpxu_YUQLiH7FniLUmbWunDqO6rcdrndMNE7NScNI6SIS_PJaKPuOKPJmRfiqxCjaKFwCZC3BwYnUj-6jJPY1scaMIp33ddn1Xzfl__m40
+Compiling the template with handlebars
+PDF Buffer:- <Buffer 25 50 44 46 2d 31 2e 34 0a 25 d3 eb e9 e1 0a 31 20 30 20 6f 62 6a 0a 3c 3c 2f 43 72 65 61 74 6f 72 20 28 43 68 72 6f 6d 69 75 6d 29 0a 2f 50 72 6f 64 ... 544729 more bytes>
