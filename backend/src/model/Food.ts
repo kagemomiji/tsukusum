@@ -29,6 +29,10 @@ export default class Food {
         return this._alias;
     }
 
+    get mealName(){
+        return this._mealName;
+    }
+
     public toString = (): string => {
         return `${this._name}(${this._amount})`;
     }

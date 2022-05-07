@@ -3,7 +3,6 @@ import Food from './Food';
 import Meal from "./Meal";
 import RecipeStep from './RecipeStep';
 import Tool from './Tool';
-import { PLANT_UML } from '../common/const/PlantUml';
 
 const RECIPE_SPEC_TAG = 'h3';
 
@@ -12,13 +11,12 @@ export default class Meals {
     private _sub: Meal[] = []
     private _tools: Tool[] = []
     private _steps: RecipeStep[] = [];
-    private _content: cheerio.Cheerio
     constructor(body: string) {
         const $ = cheerio.load(body);
         // extrat meal
         let isSubMeal: boolean = false;
-        this._content = $('section').has('#step1').children('#page_recipe').children().find('p,h3');
-        this._content.each( (_i: number, element: cheerio.Element) => {
+        let content = $('section').has('#step1').children('#page_recipe').children().find('p,h3');
+        content.each( (_i: number, element: cheerio.Element) => {
             if (element.type === "tag" &&  element.name === RECIPE_SPEC_TAG && $(element).text() === "副菜"){
                 isSubMeal = true;
             }
@@ -113,17 +111,4 @@ export default class Meals {
         return foodInfo;
     }
 
-    public getStepUML = (): string => {
-        let umlContent = this._steps.map( v => {
-            return v.getUML();
-        }).join("\n");
-        return `${PLANT_UML.START_UML}
-        ${umlContent}
-        ${PLANT_UML.END_UML}
-        `
-    }
-
-    public html() : string | null {
-        return this._content.parents('#page_recipe').html();
-    }
 }
