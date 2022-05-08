@@ -5,6 +5,7 @@ import CheckBoxList from "./CheckBoxList";
 type Props = {
     meals: Meals;
 }
+
 const SummaryContent: React.FC<Props> = ({meals}): JSX.Element => {
   console.log(meals);
     return (
@@ -14,7 +15,7 @@ const SummaryContent: React.FC<Props> = ({meals}): JSX.Element => {
           <Typography component="h1" variant="h5">
                   食材
           </Typography>
-          <CheckBoxList foods={meals.getFoodInfo()}/>
+          <CheckBoxList foods={meals.getFoodInfo()} />
         </Grid>
         <Grid item xs={12} md={9} zeroMinWidth>
           <Typography component="h1" variant="h5">

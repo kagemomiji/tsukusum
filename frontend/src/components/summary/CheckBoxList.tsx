@@ -8,7 +8,7 @@ import List from '@mui/material/List'
 import Food from '../../model/Food';
 
 type Props = {
-    foods: Food[];
+    foods: Food[]
 }
 
 const CheckBoxList = (prop: Props): JSX.Element => {
@@ -31,7 +31,7 @@ const CheckBoxList = (prop: Props): JSX.Element => {
   };
 
   return (
-     <List sx={{ width: '100%', maxWidth: 480, maxHeight: 300, overflow: 'auto', position: 'relative', bgcolor: 'background.paper' }}>
+     <List sx={{ width: '100%',  maxHeight: 300, overflow: 'auto', position: 'relative', bgcolor: 'background.paper' }}>
       {foods.map((value: Food, index: number) => {
         const labelId = `checkbox-list-label-${index}`;
 
