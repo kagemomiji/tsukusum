@@ -1,7 +1,7 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, TextField} from "@mui/material";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
-import { Tsukuoki } from "../common/const/Tsukuoki";
+import { Tsukuoki } from "../../common/const/Tsukuoki";
 
 
 
@@ -28,9 +28,6 @@ export default function Form(){
     return (
         <>
             {doRedirect && <Navigate to={`/summary?id=${tsukuokiId}`}/>}
-            <Typography component="h1" variant="h5">
-                Tsukuoki Summarizer
-            </Typography>
             <Box component="form" sx={{mt: 3, width: '75%'}} onSubmit={onClickHandler} textAlign='center'>
                 <Grid spacing={2}>
                     <Grid xs={12}>

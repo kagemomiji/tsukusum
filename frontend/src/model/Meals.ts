@@ -1,72 +1,29 @@
-import cheerio from 'cheerio';
 import Food from './Food';
-import Meal from "./Meal";
 import RecipeStep from './RecipeStep';
 import Tool from './Tool';
 import { PLANT_UML } from '../common/const/PlantUml';
+import Meal, { MealProperties } from './Meal';
 
-const RECIPE_SPEC_TAG = 'h3';
+export type MealsProperties = {
+    _main: MealProperties[]
+    _sub: MealProperties[]
+    _tools: Tool[]
+    _steps: RecipeStep[]
+}
 
 export default class Meals {
     private _main: Meal[] = []
     private _sub: Meal[] = []
     private _tools: Tool[] = []
-    private _steps: RecipeStep[] = [];
-    constructor(body: string) {
-        const $ = cheerio.load(body);
-        // extrat meal
-        let isSubMeal: boolean = false;
-        let content = $('section').has('#step1').children('#page_recipe').children().find('p,h3');
-        content.each( (_i: number, element: cheerio.Element) => {
-            if (element.type === "tag" &&  element.name === RECIPE_SPEC_TAG && $(element).text() === "副菜"){
-                isSubMeal = true;
-            }
-            if (element.type === "tag" && element.name !== RECIPE_SPEC_TAG){
-                let url = $(element).find('a').attr('href');
-                let meal = new Meal($(element).text(), url)
-                if (isSubMeal) this._sub.push(meal);
-                else this._main.push(meal);
-            }
-        });
-        // extract tools
-        $('.tejun').children('thead').children().children().each((i: number, element: cheerio.Element) => {
-            if (!$(element).text().includes("手順")){
-                this._tools = this._tools.concat($(element).text().split('/').map(name => new Tool(i, name.split(/\d/)[0])));
-            }
-        });
+    private _steps: RecipeStep[] = []
 
-        // extract step
-        $('.tejun').children('tbody').children().each((_i: number, colElement: cheerio.Element) => {
-            $(colElement).children().each((rowIndex: number, rowElement: cheerio.Element) => {
-                //iconc-checkmarkを洗浄に置き換える
-                $(rowElement).has('.icon-checkmark').children('span').replaceWith("洗浄");
-                //stepsを探して代入していく
-                let operation = $(rowElement).text();
-                if (rowIndex > 0 && operation.length > 0){
-                    let url = $(rowElement).find('a').attr('href');
-                    let targetTools: Tool[] = this._tools.filter(tool => tool.index === rowIndex);
-                    let meal = url === undefined ? undefined : this.all().find(meal => meal.url === url);
-                    if(meal === undefined){ 
-                        meal = this.all().find( meal => operation.includes(meal.name));
-                    }
-                    if (targetTools.length === 1){
-                        this._steps.push(new RecipeStep(operation, targetTools[0].name, meal));
-                    } else {
-                        let targetTool = targetTools.find( tool => operation.includes(tool.name));
-                        if(targetTool){
-                            // tool名を削除する
-                            let reg = new RegExp(`（${targetTool.name}）`);
-                            this._steps.push(new RecipeStep(operation.replace(reg, ""), targetTool.name, meal));
-                        }else if (rowIndex === 1){
-                            this._steps.push(new RecipeStep(operation, targetTools[0].name, meal));
-                        }
-                    }
-
-                }
-            });
-        });
+    constructor(properties: MealsProperties){
+        this._main = properties._main.map(prop => new Meal(prop));
+        this._sub = properties._sub.map(prop => new Meal(prop));
+        this._tools = properties._tools;
+        this._steps = properties._steps;
     }
-
+    
     public get main() {
         return this._main;
     }
@@ -89,9 +46,6 @@ export default class Meals {
         return all;
     }
 
-    public extractFoods = async (): Promise<void> =>  {
-        await Promise.allSettled(this.all().map((meal: Meal) => meal.setFoods()));
-    }
 
     public getFoods = () : Food[] => {
         return this.all().flatMap(meal => meal.foods).sort((a, b) => (a.name.localeCompare(b.name)));
@@ -107,7 +61,11 @@ export default class Meals {
         let foodInfo: Food[] = [];
         for (const foodName of foodNameList){
             let amount = this.getFoods().filter(food => food.name === foodName).map(food => {return `${food.amount}`}).join(" + ");
-            foodInfo.push(new Food(foodName, amount));
+            foodInfo.push(new Food({
+                _name: foodName ,
+                _amount: amount,
+                _alias: ""
+            }));
         }
         return foodInfo;
     }
