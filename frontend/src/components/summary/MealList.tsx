@@ -16,7 +16,7 @@ const MealList = (prop: Props): JSX.Element => {
      <List sx={{ width: '100%',  maxHeight: 300, overflow: 'auto', position: 'relative', bgcolor: 'background.paper' }}>
       {meals.map((value: Meal, index: number) => {
         const labelId = `checkbox-list-label-${index}`;
-        const color = value.storeType === "冷蔵" ? blue[500] : deepPurple[500]; 
+        const color = value.storeType === "冷凍" ? deepPurple[600] : blue[400]; 
 
         return (
           <ListItem
@@ -26,9 +26,9 @@ const MealList = (prop: Props): JSX.Element => {
           >
             
             <ListItemIcon>
-              <Avatar sx={{bgcolor: color, color: 'white'}}>{`${value.storeLimit}`}</Avatar>
+              <Avatar sx={{bgcolor: color, color: 'white'}}>{`${value.storeLimit?.substring(0,2) ?? "?"}`}</Avatar>
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`${value.name}` } secondary={`${value.storeType}:${value.storeLimit}`} sx={{lineHeight:1, margin:0}}/>
+            <ListItemText id={labelId} primary={`${value.name}` } secondary={`${value.storeType ?? "冷蔵"}:${value.storeLimit ?? "?"}`} sx={{lineHeight:1, margin:0}}/>
           </ListItem>
         );
       })}
