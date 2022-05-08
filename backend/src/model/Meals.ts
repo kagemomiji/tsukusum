@@ -1,4 +1,6 @@
 import cheerio from 'cheerio';
+import { PLANT_UML } from '../common/const/PlantUml';
+import PlantumlClient from '../common/PlantumlClient';
 import Food from './Food';
 import Meal from "./Meal";
 import RecipeStep from './RecipeStep';
@@ -11,6 +13,7 @@ export default class Meals {
     private _sub: Meal[] = []
     private _tools: Tool[] = []
     private _steps: RecipeStep[] = [];
+    private stepUrl?: string
     constructor(body: string) {
         const $ = cheerio.load(body);
         // extrat meal
@@ -90,7 +93,9 @@ export default class Meals {
 
     public extractFoods = async (): Promise<void> =>  {
         await Promise.allSettled(this.all().map((meal: Meal) => meal.setFoods()));
+        this.stepUrl = PlantumlClient.makePlantumlURL(this.getStepUML(), "svg");
     }
+
 
     public getFoods = () : Food[] => {
         return this.all().flatMap(meal => meal.foods).sort((a, b) => (a.name.localeCompare(b.name)));
@@ -109,6 +114,16 @@ export default class Meals {
             foodInfo.push(new Food(foodName, amount));
         }
         return foodInfo;
+    }
+
+    private getStepUML = (): string => {
+        let umlContent = this._steps.map( v => {
+            return v.getUML();
+        }).join("\n");
+        return `${PLANT_UML.START_UML}
+        ${umlContent}
+        ${PLANT_UML.END_UML}
+        `
     }
 
 }

@@ -23,7 +23,6 @@
     "config": "^3.3.7",
     "express": "^4.18.1",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4",
-    "zlib": "^1.0.5"
+    "typescript": "^4.6.4"
   }
 }
