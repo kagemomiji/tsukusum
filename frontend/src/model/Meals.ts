@@ -1,14 +1,14 @@
 import Food from './Food';
-import RecipeStep from './RecipeStep';
+import RecipeStep, { RecipeStepProperties } from './RecipeStep';
 import Tool from './Tool';
-import { PLANT_UML } from '../common/const/PlantUml';
 import Meal, { MealProperties } from './Meal';
 
 export type MealsProperties = {
     _main: MealProperties[]
     _sub: MealProperties[]
     _tools: Tool[]
-    _steps: RecipeStep[]
+    _steps: RecipeStepProperties[]
+    stepUrl: string;
 }
 
 export default class Meals {
@@ -16,12 +16,14 @@ export default class Meals {
     private _sub: Meal[] = []
     private _tools: Tool[] = []
     private _steps: RecipeStep[] = []
+    private _stepUrl: string
 
     constructor(properties: MealsProperties){
         this._main = properties._main.map(prop => new Meal(prop));
         this._sub = properties._sub.map(prop => new Meal(prop));
         this._tools = properties._tools;
-        this._steps = properties._steps;
+        this._steps = properties._steps.map(prop => new RecipeStep(prop));
+        this._stepUrl = properties.stepUrl;
     }
     
     public get main() {
@@ -37,6 +39,10 @@ export default class Meals {
 
     public get steps(){
         return this._steps;
+    }
+
+    public get stepUrl(){
+        return this._stepUrl;
     }
 
     public all(): Meal[]{
@@ -68,15 +74,5 @@ export default class Meals {
             }));
         }
         return foodInfo;
-    }
-
-    public getStepUML = (): string => {
-        let umlContent = this._steps.map( v => {
-            return v.getUML();
-        }).join("\n");
-        return `${PLANT_UML.START_UML}
-        ${umlContent}
-        ${PLANT_UML.END_UML}
-        `
     }
 }

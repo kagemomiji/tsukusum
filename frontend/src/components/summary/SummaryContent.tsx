@@ -13,6 +13,7 @@ const SummaryContent: React.FC<Props> = ({meals}): JSX.Element => {
                 食材
         </Typography>
         <CheckBoxList foods={meals.getFoodInfo()}/>
+        <img src={meals.stepUrl} alt="plantuml"/>
       </>
     );
 }
