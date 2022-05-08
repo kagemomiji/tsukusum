@@ -13,7 +13,8 @@ const Summary = (): JSX.Element => {
     const id = query.get("id");
     const [isLoading, setLoading] = useState(id !== null && id.toString().length > 1);
     const [meals, setMeals] = useState<Meals>();
-    const url = query.get("id") === undefined ? "" : "http://localhost:8080/" + id;
+    const [message, setMessage] = useState("")
+    const url = query.get("id") === undefined ? "" : "http://192.168.1.26:8080/" + id;
     console.log(url);
 
    useEffect(() => {
@@ -21,16 +22,20 @@ const Summary = (): JSX.Element => {
             axios.get(url, { timeout : 8000 }).then(res => {
                 let properties = JSON.parse(JSON.stringify(res.data)) as MealsProperties;
                 console.log(new Meals(properties));
-                setLoading(false);
                 setMeals(new Meals(properties));
-            });
+            }).catch(
+                (_reason) => setMessage("server access failed")
+            )
+            .finally(
+                () => setLoading(false)
+            );
         }
    }, [url]) 
 
     return (
         <>
         {isLoading ? 
-            <SpinnerDotted />  : (meals === undefined ? "hoge" : <SummaryContent meals={meals}/>)
+            <SpinnerDotted />  : (meals === undefined ? message : <SummaryContent meals={meals}/>)
         }
         </>
     );
