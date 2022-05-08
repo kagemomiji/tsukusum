@@ -1,6 +1,7 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import Meals from "../../model/Meals";
 import CheckBoxList from "./CheckBoxList";
+import MealList from "./MealList";
 
 type Props = {
     meals: Meals;
@@ -16,6 +17,11 @@ const SummaryContent: React.FC<Props> = ({meals}): JSX.Element => {
                   食材
           </Typography>
           <CheckBoxList foods={meals.getFoodInfo()} />
+          <Divider variant="middle"/>
+          <Typography component="h1" variant="h5" sx={{mt: 3}}>
+                  保存期間
+          </Typography>
+          <MealList meals={meals.all()}/>
         </Grid>
         <Grid item xs={12} md={9} zeroMinWidth>
           <Typography component="h1" variant="h5">
