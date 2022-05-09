@@ -3,14 +3,18 @@ import { SpinnerDotted } from "spinners-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Meals, { MealsProperties } from "../../model/Meals";
-import "../../common/setting";
 import SummaryContent from "../summary/SummaryContent";
 
 const Summary = (): JSX.Element => {
+    // query parameter 
     const location = useLocation();
     const search = location.search;
     const query = new URLSearchParams(search);
     const id = query.get("id");
+    
+    // backend server
+
+    // state
     const [isLoading, setLoading] = useState(id !== null && id.toString().length > 1);
     const [meals, setMeals] = useState<Meals>();
     const [message, setMessage] = useState("")
