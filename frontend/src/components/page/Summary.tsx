@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Meals, { MealsProperties } from "../../model/Meals";
 import SummaryContent from "../summary/SummaryContent";
+import { Common } from "../../common/const/Common";
 
 const Summary = (): JSX.Element => {
     // query parameter 
@@ -18,7 +19,8 @@ const Summary = (): JSX.Element => {
     const [isLoading, setLoading] = useState(id !== null && id.toString().length > 1);
     const [meals, setMeals] = useState<Meals>();
     const [message, setMessage] = useState("")
-    const url = query.get("id") === undefined ? "" : "http://192.168.1.26:8080/" + id;
+    console.log(process.env.TS_BACKEND_URL);
+    let url = id === null ? "" : new URL(id, Common.backendURL).toString();
     console.log(url);
 
    useEffect(() => {
