@@ -1,36 +1,30 @@
 import Meal from "./Meal";
 
 export default class RecipeStep {
-    private _operation: string
-    private _tool: string
-    private _meal?: Meal
+    public date: string
+    public operation: string
+    public tool: string
+    public meal?: Meal
 
-    constructor(operation: string, tool: string, meal?: Meal) {
-        this._operation = operation;
-        this._tool = tool;
-        this._meal = meal;
+    constructor(date: string, operation: string, tool: string, meal?: Meal) {
+        this.date = date;
+        this.operation = operation;
+        this.tool = tool;
+        this.meal = meal;
     }
 
-    public get operation() {
-        return this._operation;
 
-    }
-
-    public get tool(){
-        return this._tool;
-    }
-
-    public get meal(){
-        return this._meal;
-    }
-
-    public getUML = (): string => {
+    public getUML = (header?: string, preFooter?: string): string => {
         if(this.meal === undefined || this.meal.steps.length === 0){
-            return `|${this._tool}|
-            :${this._operation};`
+            return `${preFooter ?? ""}
+            |${this.tool}|
+            ${header ?? ""}
+            :${this.operation};`
         } else {
-            return `|${this._tool}|
-            partition ${this._operation} \{
+            return `${preFooter ?? ""}
+            |${this.tool}|
+            ${header ?? ""}
+            partition ${this.operation} \{
                 note 
                 ${this.meal.foods.map(food => {return food.toString()}).join('\n')}
                 end note

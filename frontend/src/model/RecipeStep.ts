@@ -1,9 +1,10 @@
 import Meal, { MealProperties } from "./Meal";
 
 export type RecipeStepProperties = {
-    _operation: string,
-    _tool: string,
-    _meal?: MealProperties
+    date: string,
+    operation: string,
+    tool: string,
+    meal?: MealProperties
 }
 
 export default class RecipeStep {
@@ -12,10 +13,10 @@ export default class RecipeStep {
     private _meal?: Meal
 
     constructor(props: RecipeStepProperties) {
-        this._operation = props._operation;
-        this._tool = props._tool;
-        if (props._meal !== undefined){
-            this._meal = new Meal(props._meal);
+        this._operation = props.operation;
+        this._tool = props.tool;
+        if (props.meal !== undefined){
+            this._meal = new Meal(props.meal);
         }
     }
 

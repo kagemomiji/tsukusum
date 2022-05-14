@@ -21,9 +21,8 @@ const Summary = (): JSX.Element => {
     const [message, setMessage] = useState("")
     console.log(process.env.TS_BACKEND_URL);
     let url = id === null ? "" : new URL(id, Common.backendURL).toString();
-    console.log(url);
 
-   useEffect(() => {
+    useEffect(() => {
         if(url.length > 0){
             axios.get(url, { timeout : 8000 }).then(res => {
                 let properties = JSON.parse(JSON.stringify(res.data)) as MealsProperties;
