@@ -1,0 +1,13 @@
+# common
+*/node_modules
+Dockerfile
+*.md
+.gitignore
+.vscode
+
+# backend
+backend/public
+backend/dist
+
+# frontend
+frontend/build

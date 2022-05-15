@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Meals, { MealsProperties } from "../../model/Meals";
 import SummaryContent from "../summary/SummaryContent";
-import { Common } from "../../common/const/Common";
 
 const Summary = (): JSX.Element => {
     // query parameter 
@@ -19,8 +18,8 @@ const Summary = (): JSX.Element => {
     const [isLoading, setLoading] = useState(id !== null && id.toString().length > 1);
     const [meals, setMeals] = useState<Meals>();
     const [message, setMessage] = useState("")
-    console.log(process.env.TS_BACKEND_URL);
-    let url = id === null ? "" : new URL(id, Common.backendURL).toString();
+    const baseUrl = process.env.REACT_APP_BACKEND_URL ?? window.location.origin;
+    let url = id === null ? "" : new URL(`/api/tsukuoki/${id}`, baseUrl).toString();
 
     useEffect(() => {
         if(url.length > 0){

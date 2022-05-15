@@ -1,4 +1,6 @@
 node_modules
 
 # Ignore built ts files
-*/dist/**/*
+backend/dist
+backend/public
+frontend/build

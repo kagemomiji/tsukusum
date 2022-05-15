@@ -1,5 +1,6 @@
 import axios from 'axios';
 import express from 'express';
+import path from 'path';
 import { Tsukuoki } from './common/const/Tsukuoki';
 import Meals from './model/Meals';
 
@@ -8,20 +9,15 @@ const app: express.Express = express();
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
-//CROS対応（というか完全無防備：本番環境ではだめ絶対）
-app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "*")
-    res.header("Access-Control-Allow-Headers", "*");
-    next();
-})
+app.use(express.static(path.join(__dirname, "..", "public")));
+
 
 app.listen(8080, () => {
     console.log("Start on port 8080.")
 })
 
 
-app.get('/:id', async (req, res) => {
+app.get('/api/tsukuoki/:id', async (req, res) => {
     try{
         const meals: Meals = await getSummary(req.params.id);
         res.status(200).json(meals);
@@ -33,6 +29,12 @@ app.get('/:id', async (req, res) => {
         }
     }
 })
+
+/* GET home page. */
+app.get('/', (_req, res, _next) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
 
 const getSummary = async (id: string): Promise<Meals> => {
     let url = `${Tsukuoki.url}${id}/`;
