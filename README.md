@@ -1,4 +1,4 @@
-# Tukuoki Summarizer
+# TsukuSum
 
 ## 概要
 
@@ -13,13 +13,13 @@
 
 ### linux server
 
-run build.sh script in the repository base direcotry.
+build.shスクリプトを実行します
 
 ```bash
 ./build.sh
 ```
 
-then go to backend directory and run
+backendディレクトリに移動してサーバーを起動します
 
 ```bash
 cd backend
@@ -32,13 +32,13 @@ you can access
 docker buildをクローンしたレポジトリのルートディレクトリ上で実行します
 
 ```bash
-docker build -t tuskuoki-summarizer .
+docker build -t tsukusum .
 ```
 
 ビルドが完了したら以下の用にコマンドを入力すると起動します
 
 ```bash
-docker run --rm -d --name tsukuoki-summarizer -p 8080:8080 tsukuoki-summarizer:latest
+docker run --rm -d --name tsukusum -p 8080:8080 tsukuoki-summarizer:latest
 ```
 
 ## 環境変数
