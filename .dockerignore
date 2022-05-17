@@ -1,10 +1,13 @@
 # common
 */node_modules
 Dockerfile
+LICENSE
 *.md
 .gitignore
 .vscode
 .github
+.docs
+build.sh
 
 # backend
 backend/public
