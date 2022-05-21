@@ -6,14 +6,16 @@ import Meals from './model/Meals';
 
 const app: express.Express = express();
 
+const port: number = parseInt(process.env.TS_PORT ?? '8080');
+
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 
-app.listen(8080, () => {
-    console.log("Start on port 8080.")
+app.listen(port, () => {
+    console.log(`Start on port ${port}.`)
 })
 
 
