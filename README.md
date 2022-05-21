@@ -48,6 +48,7 @@ docker run --rm -d --name tsukusum -p 8080:8080 tsukuoki-summarizer:latest
 
 |項目|説明|例|
 |---|---|---|
+|TS_PORT| サーバーを起動するポート。デフォルトでは8080番を使用する | 3000 |
 |TS_PLANTUMLE|plantumlのサーバーのURL。指定しない場合は`https://plantuml.com/plantuml`が指定される| `https://plantuml.com/plantuml` |
 
 
