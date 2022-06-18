@@ -19,6 +19,7 @@ app.listen(port, () => {
 })
 
 
+// backend
 app.get('/api/tsukuoki/:id', async (req, res) => {
     try{
         const meals: Meals = await getSummary(req.params.id);
@@ -32,11 +33,12 @@ app.get('/api/tsukuoki/:id', async (req, res) => {
     }
 })
 
-/* GET home page. */
-app.get('/', (_req, res, _next) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-});
+// frontend
+app.use(express.static(path.join(__dirname, "..", "public")));
 
+app.use((_req, res, _next) => {
+    res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
 
 const getSummary = async (id: string): Promise<Meals> => {
     let url = `${Tsukuoki.url}${id}/`;
@@ -46,4 +48,3 @@ const getSummary = async (id: string): Promise<Meals> => {
     await meals.extractFoods();
     return meals;
 }
-
